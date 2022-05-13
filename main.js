@@ -3,7 +3,7 @@
 //img
 //name
 //ruolo
-const card = [
+const cards = [
    {
       name: "wayne Barret",
       ruolo: "Founder / CEO",
@@ -13,12 +13,45 @@ const card = [
       name: "wayne Barret",
       ruolo: "Founder / CEO",
       img : "img/wayne-barnett-founder-ceo.jpg"
-   }
+   },
+   {
+      name: "wayne Barret",
+      ruolo: "Founder / CEO",
+      img : "img/wayne-barnett-founder-ceo.jpg"
+   },
+   {
+      name: "wayne Barret",
+      ruolo: "Founder / CEO",
+      img : "img/wayne-barnett-founder-ceo.jpg"
+   },
+   {
+      name: "wayne Barret",
+      ruolo: "Founder / CEO",
+      img : "img/wayne-barnett-founder-ceo.jpg"
+   },
+   {
+      name: "wayne Barret",
+      ruolo: "Founder / CEO",
+      img : "img/wayne-barnett-founder-ceo.jpg"
+   },
 ];
 // prendo il container html dove devo stampare i miei ogetti
-const cardContainer = document.querySelector(".team-card")
+const cardsContainer = document.querySelector(".team-container")
 //ciclo la mia lista di ogetti 
-for(let i = 0; i < card.length; i++){
-   const card =`
+for(let i = 0; i < cards.length; i++){
+   const card = `
+   <div class="team-card">
+   <div class="card-image">
+     <img
+       src="${cards[i].img}"
+       alt="Wayne Barnett"
+     />
+   </div>
+   <div class="card-text">
+     <h3>${cards[i].name}</h3>
+     <p>${cards[i].ruolo}</p>
+   </div>
+ </div>
    `;
+   cardsContainer.innerHTML += card;
 }
