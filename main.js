@@ -41,17 +41,17 @@ const cardsContainer = document.querySelector(".team-container")
 for(let i = 0; i < cards.length; i++){
    const card = `
    <div class="team-card">
-   <div class="card-image">
-     <img
-       src="${cards[i].img}"
-       alt="Wayne Barnett"
-     />
+      <div class="card-image">
+         <img
+            src="${cards[i].img}"
+            alt="Wayne Barnett"
+         />
+      </div>
+      <div class="card-text">
+         <h3>${cards[i].name}</h3>
+         <p>${cards[i].ruolo}</p>
+      </div>
    </div>
-   <div class="card-text">
-     <h3>${cards[i].name}</h3>
-     <p>${cards[i].ruolo}</p>
-   </div>
- </div>
    `;
    cardsContainer.innerHTML += card;
 }
@@ -74,23 +74,23 @@ btnAdd.addEventListener("click",
          img: newMeberImg.value
       }
       const card = `
-   <div class="team-card">
-   <div class="card-image">
-     <img
-       src="${newMember.img}"
-       alt="Wayne Barnett"
-     />
-   </div>
-   <div class="card-text">
-     <h3>${newMember.name}</h3>
-     <p>${newMember.ruolo}</p>
-   </div>
- </div>
-   `;
-   cardsContainer.innerHTML += card;
-   cards.push(newMember);
-   // seleziono la costante input creando una funzione per svuotare i campi
-   input.forEach(input => input.value = "");
+          <div class="team-card">
+            <div class="card-image">
+               <img
+                  src="${newMember.img}"
+                  alt="Wayne Barnett"
+               />
+            </div>
+            <div class="card-text">
+               <h3>${newMember.name}</h3>
+               <p>${newMember.ruolo}</p>
+            </div>
+          </div>
+               `;
+      cardsContainer.innerHTML += card;
+      cards.push(newMember);
+      // seleziono la costante input creando una funzione per svuotare i campi
+      input.forEach(input => input.value = "");
    }
 );
 // console.log(newMember);
