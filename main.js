@@ -61,6 +61,7 @@ const btnAdd = document.getElementById("addMemberButton");
 const newMaberName = document.getElementById("name");
 const newMeberRuolo = document.getElementById("role");
 const newMeberImg = document.getElementById("image");
+const newMember = {}
 //creo un evento al click
 btnAdd.addEventListener("click",
    function (){
@@ -74,13 +75,13 @@ btnAdd.addEventListener("click",
    <div class="team-card">
    <div class="card-image">
      <img
-       src="${cards[i].img}"
+       src="${newMember.img}"
        alt="Wayne Barnett"
      />
    </div>
    <div class="card-text">
-     <h3>${cards[i].name}</h3>
-     <p>${cards[i].ruolo}</p>
+     <h3>${newMember.name}</h3>
+     <p>${newMember.ruolo}</p>
    </div>
  </div>
    `;
@@ -88,3 +89,4 @@ btnAdd.addEventListener("click",
    cards.push(newMember);
    }
 );
+console.log(newMember);
