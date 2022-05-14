@@ -61,7 +61,7 @@ const btnAdd = document.getElementById("addMemberButton");
 const newMaberName = document.getElementById("name");
 const newMeberRuolo = document.getElementById("role");
 const newMeberImg = document.getElementById("image");
-const newMember = {}
+// const newMember = {}
 //creo un evento al click
 btnAdd.addEventListener("click",
    function (){
@@ -89,4 +89,4 @@ btnAdd.addEventListener("click",
    cards.push(newMember);
    }
 );
-console.log(newMember);
+// console.log(newMember);
