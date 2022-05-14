@@ -61,6 +61,8 @@ const btnAdd = document.getElementById("addMemberButton");
 const newMaberName = document.getElementById("name");
 const newMeberRuolo = document.getElementById("role");
 const newMeberImg = document.getElementById("image");
+//creo una costante per selozionare ogni input
+const input = document.querySelectorAll("input");
 // const newMember = {}
 //creo un evento al click
 btnAdd.addEventListener("click",
@@ -87,6 +89,8 @@ btnAdd.addEventListener("click",
    `;
    cardsContainer.innerHTML += card;
    cards.push(newMember);
+   // seleziono la costante input creando una funzione per svuotare i campi
+   input.forEach(input => input.value = "");
    }
 );
 // console.log(newMember);
